@@ -1,1 +1,215 @@
-/* ここから下に記載していく */
+@charset "utf-8";
+
+html {
+  font-size: 62.5%; /* 16px x 62.5% = 10px */
+}
+
+body {
+  color: #222222;
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.site-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+/* ヘッダー　ここから　--------------------------------------- */
+
+.flex {
+  display: flex;
+}
+
+/* ヘッダー　ここまで　--------------------------------------- */
+
+/* TOP ここから　-------------------------------------------- */
+
+.top-img {
+  position: relative;
+}
+
+.top-img h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: white;
+}
+.top-img h2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  font-size: 2.4rem;
+  color: white;
+}
+
+/* TOP ここまで　------------------------------------------- */
+
+/* ABOUT ここから　----------------------------------------- */
+
+.about_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #ffd61a;
+  margin: 60px 0 30px;
+}
+
+.about_title_j {
+  font-size: 1.8rem;
+  margin: 0 0 60px;
+}
+
+.about_info {
+  margin: 40px;
+}
+
+.about_pics {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about_pics li {
+  width: calc(100% / 4); /*←画像を横に4つ並べる場合*/
+  padding: 0 0; /*←画像の左右に余白を入れる場合は値を指定*/
+  box-sizing: border-box;
+}
+.about_pics li img {
+  max-width: 100%; /*画像のはみだしを防ぐ*/
+  height: auto; /*画像の縦横比を維持 */
+}
+
+/* ABOUT ここまで　----------------------------------------- */
+
+/*　COURSE ここから　--------------------------------------- */
+
+.course_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222222;
+  margin: 60px 0 30px;
+}
+
+.course_info {
+  margin-bottom: 60px;
+}
+
+.course_pics {
+  display: flex;
+  flex-wrap: wrap;
+}
+.course_pics li {
+  width: calc(100% / 2); /*←画像を横に4つ並べる場合*/
+  padding: 0 0; /*←画像の左右に余白を入れる場合は値を指定*/
+  box-sizing: border-box;
+}
+.course_pics li img {
+  max-width: 100%; /*画像のはみだしを防ぐ*/
+  height: auto; /*画像の縦横比を維持 */
+}
+
+/*　COURSE ここまで　--------------------------------------- */
+
+/* NEWS ここから　------------------------------------------ */
+
+.news_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #ffd61a;
+  margin: 60px 0 30px;
+}
+
+.news_title_j {
+  font-size: 1.8rem;
+  margin: 0 0 60px;
+}
+
+.news_wrapper {
+  max-width: 990px;
+  margin: auto;
+}
+
+.news_pics {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.news_contents {
+  width: 300px; /*←画像を横に4つ並べる場合*/
+  padding: 0 15px; /*←画像の左右に余白を入れる場合は値を指定*/
+}
+
+.news_date {
+  margin: 30px 0 24px;
+}
+
+.btn {
+  display: block;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 60px;
+  padding: 21px 0;
+  background-color: #ffd61a;
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* NEWS ここまで　------------------------------------------ */
+
+/* ACCESS ここから　---------------------------------------- */
+
+.access_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222222;
+  margin: 60px 0 30px;
+}
+
+.access_title_j {
+  font-size: 1.8rem;
+  margin: 0 0 60px;
+}
+
+/* ACCESS ここまで　---------------------------------------- */
+
+/* CONTACT ここから　--------------------------------------- */
+
+.contact_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222222;
+  margin: 60px 0 30px;
+}
+
+.contact_title_j {
+  font-size: 1.8rem;
+  margin: 0 0 60px;
+}
+
+.contact_info {
+  margin: 30px 0 70px;
+}
+
+/* CONTACT ここまで　--------------------------------------- */
+
+/* フッター ここから　---------------------------------------- */
+
+/* フッター ここまで　---------------------------------------- */
