@@ -27,6 +27,21 @@ img {
 
 .flex {
   display: flex;
+  justify-content: space-between;
+}
+
+.header_yohaku {
+  display: flex;
+  margin: 0 50px;
+}
+
+.header_list {
+  padding: 50px 25px;
+}
+
+.header_list > a {
+  color: #222222;
+  text-transform: uppercase;
 }
 
 /* ヘッダー　ここまで　--------------------------------------- */
@@ -101,11 +116,15 @@ img {
 
 /*　COURSE ここから　--------------------------------------- */
 
+.course {
+  padding: 60px 0 0;
+}
+
 .course_title {
   font-size: 2.4rem;
   font-weight: bold;
   color: #222222;
-  margin: 60px 0 30px;
+  margin: 0 0 30px;
 }
 
 .course_info {
@@ -126,15 +145,39 @@ img {
   height: auto; /*画像の縦横比を維持 */
 }
 
+.course_haikei {
+  background-color: #f4f4f4;
+}
+
+.course_pics_right {
+  max-width: 430px;
+  margin: auto auto auto 50px;
+}
+
+.course_pics_left {
+  max-width: 430px;
+  margin: auto 50px auto auto;
+}
+
+.course_pics_title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0 0 40px;
+}
+
 /*　COURSE ここまで　--------------------------------------- */
 
 /* NEWS ここから　------------------------------------------ */
+
+.news {
+  padding: 60px 0;
+}
 
 .news_title {
   font-size: 2.4rem;
   font-weight: bold;
   color: #ffd61a;
-  margin: 60px 0 30px;
+  margin: 0 0 30px;
 }
 
 .news_title_j {
@@ -165,7 +208,6 @@ img {
   display: block;
   width: 300px;
   margin: auto;
-  margin-bottom: 60px;
   padding: 21px 0;
   background-color: #ffd61a;
   font-size: 1.8rem;
@@ -176,11 +218,16 @@ img {
 
 /* ACCESS ここから　---------------------------------------- */
 
+.access {
+  background-color: #f4f4f4;
+  padding: 60px 0;
+}
+
 .access_title {
   font-size: 2.4rem;
   font-weight: bold;
   color: #222222;
-  margin: 60px 0 30px;
+  margin: 0 0 30px;
 }
 
 .access_title_j {
@@ -206,6 +253,73 @@ img {
 
 .contact_info {
   margin: 30px 0 70px;
+}
+
+.form_wrapper {
+  width: 640px;
+  margin: auto;
+}
+
+.form_inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form_title {
+  width: 160px;
+  margin: 0 64px 0 16px;
+  padding: 16px 0 0 0;
+}
+
+.form_title.check_box {
+  padding: 20px 0 0 0;
+}
+
+.form_item {
+  width: 400px;
+  margin: 8px 0 8px 0;
+}
+
+.form_parts {
+  box-sizing: border-box;
+  width: 328px;
+  border: solid 1px #bfbfbf;
+  font-size: 1.6rem;
+  padding: 8px;
+}
+
+.form_label {
+  display: block;
+  margin: 12px 0 12px 0;
+}
+
+.text_area {
+  width: 328px;
+  margin: 8px 0 0 0;
+}
+
+input[type*="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: solid 1px #222222;
+  border-radius: 25%;
+  vertical-align: -2px;
+  margin: 0 12px 0 0;
+  font-size: 1.4rem;
+}
+
+input[type*="checkbox"]:checked {
+  background-color: #222222;
+}
+
+.contact_btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 38px 0 140px 0;
+  border: 0; /* 枠線を消す */
+  outline: 0; /* クリックしたときに表示される枠線を消す */
 }
 
 /* CONTACT ここまで　--------------------------------------- */

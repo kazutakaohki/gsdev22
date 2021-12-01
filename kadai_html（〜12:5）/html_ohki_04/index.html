@@ -16,17 +16,19 @@
     <div class="wrap">
       <!-- ヘッダー　ここから -->
 
-      <header class="flex">
-        <img src="img/header_logo.png" alt="サイトロゴ" />
-        <nav>
-          <ul class="flex">
-            <li><a href="#ABOUT">ABOUT</a></li>
-            <li><a href="#COURSE">COURSE</a></li>
-            <li><a href="#NEWS">NEWS</a></li>
-            <li><a href="#ACCESS">ACCESS</a></li>
-            <li><a href="#CONTACT">CONTACT</a></li>
-          </ul>
-        </nav>
+      <header>
+        <div class="flex header_yohaku">
+          <img src="img/header_logo.png" alt="サイトロゴ" />
+          <nav>
+            <ul class="flex">
+              <li class="header_list"><a href="#ABOUT">about</a></li>
+              <li class="header_list"><a href="#COURSE">course</a></li>
+              <li class="header_list"><a href="#NEWS">news</a></li>
+              <li class="header_list"><a href="#ACCESS">access</a></li>
+              <li class="header_list"><a href="#CONTACT">contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <!-- ヘッダー　ここまで -->
@@ -86,7 +88,7 @@
 
         <!-- COURSE ここから -->
 
-        <section id="COURSE">
+        <section id="COURSE" class="course">
           <div class="text-center">
             <h3 class="course_title">COURSE</h3>
             <div class="course_info">
@@ -97,54 +99,58 @@
             </div>
           </div>
 
-          <ul class="course_pics">
-            <li><img src="img/course_01.jpg" alt="" /></li>
-            <li>
-              <h3>本格的な農園を使った実地研修</h3>
-              <p>
-                チーズアカデミーでは、本格的な農園を使った実地研修を
-                行うことができます。プロとして活躍するチーズ職人も
-                使用するような、広大で環境も整った農園を余すところ
-                なく使い、卒業時には本格的なチーズを自分の力で作れる
-                実践力の養成を目指します。
-              </p>
-            </li>
-          </ul>
+          <div class="course_haikei">
+            <ul class="course_pics">
+              <li><img src="img/course_01.jpg" alt="" /></li>
+              <li class="course_pics_right">
+                <h3 class="course_pics_title">本格的な農園を使った実地研修</h3>
+                <p>
+                  チーズアカデミーでは、本格的な農園を使った実地研修を
+                  行うことができます。プロとして活躍するチーズ職人も
+                  使用するような、広大で環境も整った農園を余すところ
+                  なく使い、卒業時には本格的なチーズを自分の力で作れる
+                  実践力の養成を目指します。
+                </p>
+              </li>
+            </ul>
 
-          <ul class="course_pics">
-            <li>
-              <h3>必要な知識もしっかりと取得</h3>
-              <p>
-                チーズ作りには、しっかりとした食に関する知識が
-                欠かせません。チーズアカデミーでは、一流講師陣による、
-                チーズ作りに必要ないろはを余すところなく学べます。
-                チーズそのものでなく、栄養学全般を学ぶことも
-                可能ですので、チーズ以外への展開も夢ではないでしょう。
-              </p>
-            </li>
-            <li><img src="img/course_02.jpg" alt="" /></li>
-          </ul>
+            <ul class="course_pics">
+              <li class="course_pics_left">
+                <h3 class="course_pics_title">必要な知識もしっかりと取得</h3>
+                <p>
+                  チーズ作りには、しっかりとした食に関する知識が
+                  欠かせません。チーズアカデミーでは、一流講師陣による、
+                  チーズ作りに必要ないろはを余すところなく学べます。
+                  チーズそのものでなく、栄養学全般を学ぶことも
+                  可能ですので、チーズ以外への展開も夢ではないでしょう。
+                </p>
+              </li>
+              <li><img src="img/course_02.jpg" alt="" /></li>
+            </ul>
 
-          <ul class="course_pics">
-            <li><img src="img/course_03.jpg" alt="" /></li>
-            <li>
-              <h3>卒業制作はティスティング審査あり</h3>
-              <p>
-                チーズアカデミーでは最後の2ヶ月間で卒業制作を実施。
-                卒業制作として、チーズ作りを実際に行います。卒業後、
-                一般参加によるティスティング審査があるため、作り手の
-                目線だけでなく、消費者の目線から、卒業制作作品としての
-                チーズを、しっかりと評価いただくことができます。
-              </p>
-            </li>
-          </ul>
+            <ul class="course_pics">
+              <li><img src="img/course_03.jpg" alt="" /></li>
+              <li class="course_pics_right">
+                <h3 class="course_pics_title">
+                  卒業制作はティスティング審査あり
+                </h3>
+                <p>
+                  チーズアカデミーでは最後の2ヶ月間で卒業制作を実施。
+                  卒業制作として、チーズ作りを実際に行います。卒業後、
+                  一般参加によるティスティング審査があるため、作り手の
+                  目線だけでなく、消費者の目線から、卒業制作作品としての
+                  チーズを、しっかりと評価いただくことができます。
+                </p>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <!-- COURCE ここまで -->
 
         <!-- NEWS ここから -->
 
-        <section id="NEWS">
+        <section id="NEWS" class="news">
           <div class="news_wrapper">
             <h3 class="news_title text-center">NEWS</h3>
             <h4 class="news_title_j text-center">ニュース</h4>
@@ -189,7 +195,7 @@
 
         <!-- ACCESS ここから -->
 
-        <section id="ACCESS">
+        <section id="ACCESS" class="access">
           <div class="text-center">
             <h3 class="access_title">ACCESS</h3>
             <h4 class="access_title_j">会社情報</h4>
@@ -221,73 +227,89 @@
             </p>
           </div>
 
-          <form action="#" method="post">
-            <dl>
-              <dd>名前</dd>
-              <dt><input type="text" name="name" /></dt>
-              <dd>カナ</dd>
-              <dt><input type="text" name="kana" /></dt>
-              <dd>メールアドレス</dd>
-              <dt><input type="email" name="email" /></dt>
-              <dd>チーズアカデミーを知ったきっかけ</dd>
-              <dt>
-                <select name="選択して下さい" id="選択して下さい">
-                  <option value="google検索">google検索</option>
-                  <option value="SNS">SNS</option>
-                  <option value="紹介">紹介</option>
-                  <option value="たまたま通りかかった">
-                    たまたま通りかかった
-                  </option>
-                  <option value="その他">その他</option>
-                </select>
-              </dt>
-              <dd>志望動機選択肢</dd>
-              <dt>
-                <label for="kigyou"
-                  ><input
-                    type="radio"
-                    name="kind"
-                    id="kigyou"
-                    value="起業をしたい"
-                  />起業をしたい</label
-                >
-                <label for="syuusyoku"
-                  ><input
-                    type="radio"
-                    name="kind"
-                    id="syuusyoku"
-                    value="チーズ系企業に就職・転職したい"
-                  />チーズ系企業に就職・転職したい</label
-                >
-                <label for="ikasu"
-                  ><input
-                    type="radio"
-                    name="kind"
-                    id="ikasu"
-                    value="チーズと関わる仕事をしており、仕事に生かしたい"
-                  />チーズと関わる仕事をしており、仕事に生かしたい</label
-                >
-                <label for="kyouyou"
-                  ><input
-                    type="radio"
-                    name="kind"
-                    id="kyouyou"
-                    value="チーズの教養を身につけたい"
-                  />チーズの教養を身につけたい</label
-                >
-              </dt>
-              <dd>詳細</dd>
-              <dt>
-                <textarea
-                  name="detail"
-                  id="detail"
-                  cols="30"
-                  rows="10"
-                ></textarea>
-              </dt>
-            </dl>
-            <input type="submit" value="送信" />
-          </form>
+          <div class="form_wrapper">
+            <form action="#" method="post">
+              <dl class="form_inner">
+                <dd class="form_title">名前</dd>
+                <dt class="form_item">
+                  <input type="text" name="name" class="form_parts" />
+                </dt>
+                <dd class="form_title">カナ</dd>
+                <dt class="form_item">
+                  <input type="text" name="kana" class="form_parts" />
+                </dt>
+                <dd class="form_title">メールアドレス</dd>
+                <dt class="form_item">
+                  <input type="email" name="email" class="form_parts" />
+                </dt>
+                <dd class="form_title">チーズアカデミーを 知ったきっかけ</dd>
+                <dt class="form_item">
+                  <select
+                    name="選択して下さい"
+                    id="選択して下さい"
+                    class="form_parts"
+                  >
+                    <option value=""></option>
+                    <option value="google検索">google検索</option>
+                    <option value="SNS">SNS</option>
+                    <option value="紹介">紹介</option>
+                    <option value="たまたま通りかかった">
+                      たまたま通りかかった
+                    </option>
+                    <option value="その他">その他</option>
+                  </select>
+                </dt>
+                <dd class="form_title check_box">志望動機</dd>
+                <dt class="form_item">
+                  <label class="form_label" for="kigyou"
+                    ><input
+                      type="checkbox"
+                      name="kind"
+                      id="kigyou"
+                      value="起業をしたい"
+                    />起業をしたい</label
+                  >
+                  <label class="form_label" for="syuusyoku"
+                    ><input
+                      type="checkbox"
+                      name="kind"
+                      id="syuusyoku"
+                      value="チーズ系企業に就職・転職したい"
+                    />チーズ系企業に就職・転職したい</label
+                  >
+                  <label class="form_label" for="ikasu"
+                    ><input
+                      type="checkbox"
+                      name="kind"
+                      id="ikasu"
+                      value="チーズと関わる仕事をしており、仕事に生かしたい"
+                    />チーズと関わる仕事をしており、仕事に生かしたい</label
+                  >
+                  <label class="form_label" for="kyouyou"
+                    ><input
+                      type="checkbox"
+                      name="kind"
+                      id="kyouyou"
+                      value="チーズの教養を身につけたい"
+                    />チーズの教養を身につけたい</label
+                  >
+                </dt>
+                <dd class="form_title">詳細</dd>
+                <dt>
+                  <textarea
+                    class="text_area"
+                    name="detail"
+                    id="detail"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </dt>
+              </dl>
+            </form>
+          </div>
+          <div class="contact_btn">
+            <input class="btn text-center" type="submit" value="送信" />
+          </div>
         </section>
 
         <!-- CONTACT ここまで -->
