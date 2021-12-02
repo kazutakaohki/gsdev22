@@ -37,10 +37,14 @@
         <!-- TOP画像 ここから-->
 
         <section id="top">
-          <div class="top-img" h1 h2>
+          <div class="top_img">
             <img src="img/mainbg.png" alt="TOP画像" />
-            <h1>セカイを変えるチーズを作ろう</h1>
-            <h2>チーズ職人養成学校「チーズアカデミーTOKYO」</h2>
+            <div class="top_img_text text-center">
+              <h1 class="top_title">セカイを変えるチーズを作ろう</h1>
+              <h2 class="top_subtitle">
+                チーズ職人養成学校「チーズアカデミーTOKYO」
+              </h2>
+            </div>
           </div>
         </section>
 
@@ -199,13 +203,34 @@
           <div class="text-center">
             <h3 class="access_title">ACCESS</h3>
             <h4 class="access_title_j">会社情報</h4>
-            <ul>
-              <li>学校名 チーズアカデミーTOKYO</li>
-              <li>事務所所在地 〒107-0061東京都港区北青山3-5-6 青朋ビル2F</li>
-              <li>TEL 03-5413-5045</li>
-              <li>FAX 03-5413-5046</li>
-              <li>MAIL dummy@cheeseacademy.tokyo</li>
-            </ul>
+
+            <div class="mapBox">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3114771864566!2d139.70080821525846!3d35.66933178019702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9fa9e2e881%3A0x35396adb5ba7ce03!2z44K444O844K644Ki44Kr44OH44Of44O85p2x5Lqs!5e0!3m2!1sja!2sjp!4v1638358525607!5m2!1sja!2sjp"
+                width="1200"
+                height="400"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <div class="access_wrapper">
+              <dl class="access_inner">
+                <dd class="access_name access_gs">学校名</dd>
+                <dt class="access_item access_gs">チーズアカデミーTOKYO</dt>
+                <dd class="access_name">事務所所在地</dd>
+                <dt class="access_item">
+                  〒107-0061東京都港区北青山3-5-6 青朋ビル2F
+                </dt>
+                <dd class="access_name">TEL</dd>
+                <dt class="access_item">03-5413-5045</dt>
+                <dd class="access_name">FAX</dd>
+                <dt class="access_item">03-5413-5046</dt>
+                <dd class="access_name">MAIL</dd>
+                <dt class="access_item">dummy@cheeseacademy.tokyo</dt>
+              </dl>
+            </div>
           </div>
         </section>
 
@@ -229,82 +254,84 @@
 
           <div class="form_wrapper">
             <form action="#" method="post">
-              <dl class="form_inner">
-                <dd class="form_title">名前</dd>
-                <dt class="form_item">
-                  <input type="text" name="name" class="form_parts" />
-                </dt>
-                <dd class="form_title">カナ</dd>
-                <dt class="form_item">
-                  <input type="text" name="kana" class="form_parts" />
-                </dt>
-                <dd class="form_title">メールアドレス</dd>
-                <dt class="form_item">
-                  <input type="email" name="email" class="form_parts" />
-                </dt>
-                <dd class="form_title">チーズアカデミーを 知ったきっかけ</dd>
-                <dt class="form_item">
-                  <select
-                    name="選択して下さい"
-                    id="選択して下さい"
-                    class="form_parts"
-                  >
-                    <option value=""></option>
-                    <option value="google検索">google検索</option>
-                    <option value="SNS">SNS</option>
-                    <option value="紹介">紹介</option>
-                    <option value="たまたま通りかかった">
-                      たまたま通りかかった
-                    </option>
-                    <option value="その他">その他</option>
-                  </select>
-                </dt>
-                <dd class="form_title check_box">志望動機</dd>
-                <dt class="form_item">
-                  <label class="form_label" for="kigyou"
-                    ><input
-                      type="checkbox"
-                      name="kind"
-                      id="kigyou"
-                      value="起業をしたい"
-                    />起業をしたい</label
-                  >
-                  <label class="form_label" for="syuusyoku"
-                    ><input
-                      type="checkbox"
-                      name="kind"
-                      id="syuusyoku"
-                      value="チーズ系企業に就職・転職したい"
-                    />チーズ系企業に就職・転職したい</label
-                  >
-                  <label class="form_label" for="ikasu"
-                    ><input
-                      type="checkbox"
-                      name="kind"
-                      id="ikasu"
-                      value="チーズと関わる仕事をしており、仕事に生かしたい"
-                    />チーズと関わる仕事をしており、仕事に生かしたい</label
-                  >
-                  <label class="form_label" for="kyouyou"
-                    ><input
-                      type="checkbox"
-                      name="kind"
-                      id="kyouyou"
-                      value="チーズの教養を身につけたい"
-                    />チーズの教養を身につけたい</label
-                  >
-                </dt>
-                <dd class="form_title">詳細</dd>
-                <dt>
-                  <textarea
-                    class="text_area"
-                    name="detail"
-                    id="detail"
-                    cols="30"
-                    rows="10"
-                  ></textarea>
-                </dt>
-              </dl>
+              <div>
+                <dl class="form_inner">
+                  <dd class="form_title">名前</dd>
+                  <dt class="form_item">
+                    <input type="text" name="name" class="form_parts" />
+                  </dt>
+                  <dd class="form_title">カナ</dd>
+                  <dt class="form_item">
+                    <input type="text" name="kana" class="form_parts" />
+                  </dt>
+                  <dd class="form_title">メールアドレス</dd>
+                  <dt class="form_item">
+                    <input type="email" name="email" class="form_parts" />
+                  </dt>
+                  <dd class="form_title">チーズアカデミーを 知ったきっかけ</dd>
+                  <dt class="form_item">
+                    <select
+                      name="選択して下さい"
+                      id="選択して下さい"
+                      class="form_parts"
+                    >
+                      <option value=""></option>
+                      <option value="google検索">google検索</option>
+                      <option value="SNS">SNS</option>
+                      <option value="紹介">紹介</option>
+                      <option value="たまたま通りかかった">
+                        たまたま通りかかった
+                      </option>
+                      <option value="その他">その他</option>
+                    </select>
+                  </dt>
+                  <dd class="form_title check_box">志望動機</dd>
+                  <dt class="form_item">
+                    <label class="form_label" for="kigyou"
+                      ><input
+                        type="checkbox"
+                        name="kind"
+                        id="kigyou"
+                        value="起業をしたい"
+                      />起業をしたい</label
+                    >
+                    <label class="form_label" for="syuusyoku"
+                      ><input
+                        type="checkbox"
+                        name="kind"
+                        id="syuusyoku"
+                        value="チーズ系企業に就職・転職したい"
+                      />チーズ系企業に就職・転職したい</label
+                    >
+                    <label class="form_label" for="ikasu"
+                      ><input
+                        type="checkbox"
+                        name="kind"
+                        id="ikasu"
+                        value="チーズと関わる仕事をしており、仕事に生かしたい"
+                      />チーズと関わる仕事をしており、仕事に生かしたい</label
+                    >
+                    <label class="form_label" for="kyouyou"
+                      ><input
+                        type="checkbox"
+                        name="kind"
+                        id="kyouyou"
+                        value="チーズの教養を身につけたい"
+                      />チーズの教養を身につけたい</label
+                    >
+                  </dt>
+                  <dd class="form_title">詳細</dd>
+                  <dt>
+                    <textarea
+                      class="text_area"
+                      name="detail"
+                      id="detail"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </dt>
+                </dl>
+              </div>
             </form>
           </div>
           <div class="contact_btn">
@@ -317,11 +344,11 @@
 
       <!-- フッター　ここから -->
 
-      <fooer>
-        <small
+      <footer class="footer text-center">
+        <small class="copyrights"
           >copyrights 2016 Cheeese Academy Tokyo All RIghts Reserved.</small
         >
-      </fooer>
+      </footer>
 
       <!-- フッター　ここまで -->
     </div>

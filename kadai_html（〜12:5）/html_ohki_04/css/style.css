@@ -48,34 +48,29 @@ img {
 
 /* TOP ここから　-------------------------------------------- */
 
-.top-img {
+.top_img {
   position: relative;
 }
 
-.top-img h1 {
+.top_img_text {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  font-size: 3.6rem;
+}
+
+.top_title {
+  font-size: 3.2rem;
   font-weight: bold;
   color: white;
+  letter-spacing: 0.1mm;
 }
-.top-img h2 {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
+
+.top_subtitle {
   font-size: 2.4rem;
   color: white;
+  letter-spacing: 0.1mm;
+  padding-top: 30px;
 }
 
 /* TOP ここまで　------------------------------------------- */
@@ -235,6 +230,34 @@ img {
   margin: 0 0 60px;
 }
 
+.access_gs {
+  padding: 60px 0 12px;
+}
+
+.access_wrapper {
+  width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.access_inner {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+}
+
+.access_name {
+  width: 160px;
+  height: 50px;
+  text-align: left;
+}
+
+.access_item {
+  width: 400px;
+  height: 50px;
+  text-align: left;
+}
+
 /* ACCESS ここまで　---------------------------------------- */
 
 /* CONTACT ここから　--------------------------------------- */
@@ -326,4 +349,21 @@ input[type*="checkbox"]:checked {
 
 /* フッター ここから　---------------------------------------- */
 
+.footer {
+  background-color: #707070;
+  padding: 30px;
+}
+
+.copyrights {
+  color: white;
+}
+
 /* フッター ここまで　---------------------------------------- */
+
+/* CONTACTフォームの線を引く箇所　お試しエリア */
+
+.form_line {
+  border-top: 1px solid #999999;
+  border-left: 1px solid #999999;
+  border-right: 1px solid #999999;
+}
