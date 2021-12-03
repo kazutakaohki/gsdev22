@@ -7,6 +7,7 @@ html {
 body {
   color: #222222;
   font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 img {
@@ -140,6 +141,10 @@ img {
   height: auto; /*画像の縦横比を維持 */
 }
 
+.hanten {
+  flex-direction: row-reverse;
+}
+
 .course_haikei {
   background-color: #f4f4f4;
 }
@@ -230,8 +235,8 @@ img {
   margin: 0 0 60px;
 }
 
-.access_gs {
-  padding: 60px 0 12px;
+.access_map {
+  padding-bottom: 60px;
 }
 
 .access_wrapper {
@@ -279,28 +284,41 @@ img {
 }
 
 .form_wrapper {
-  width: 640px;
+  width: 650px;
   margin: auto;
 }
 
 .form_inner {
   display: flex;
   flex-wrap: wrap;
+  border-top: solid 1px #bfbfbf;
 }
 
 .form_title {
   width: 160px;
-  margin: 0 64px 0 16px;
-  padding: 16px 0 0 0;
+  border-right: solid 1px #bfbfbf;
+  margin: 0 0 0 16px;
+  padding: 8px 64px 0 0;
+}
+
+.form_title2 {
+  width: 160px;
+  border-right: solid 1px #bfbfbf;
+  margin: 0 0 0 16px;
+  padding: 16px 64px 0 0;
+}
+
+.form_inner2 {
+  border-bottom: solid 1px #bfbfbf;
 }
 
 .form_title.check_box {
-  padding: 20px 0 0 0;
+  padding: 20px 64px 0 0;
 }
 
 .form_item {
   width: 400px;
-  margin: 8px 0 8px 0;
+  margin: 8px 0 8px 8px;
 }
 
 .form_parts {
@@ -361,9 +379,3 @@ input[type*="checkbox"]:checked {
 /* フッター ここまで　---------------------------------------- */
 
 /* CONTACTフォームの線を引く箇所　お試しエリア */
-
-.form_line {
-  border-top: 1px solid #999999;
-  border-left: 1px solid #999999;
-  border-right: 1px solid #999999;
-}
