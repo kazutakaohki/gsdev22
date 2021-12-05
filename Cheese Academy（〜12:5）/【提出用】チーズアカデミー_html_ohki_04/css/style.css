@@ -1,0 +1,381 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%; /* 16px x 62.5% = 10px */
+}
+
+body {
+  color: #222222;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.site-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+/* ヘッダー　ここから　--------------------------------------- */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_yohaku {
+  display: flex;
+  margin: 0 50px;
+}
+
+.header_list {
+  padding: 50px 25px;
+}
+
+.header_list > a {
+  color: #222222;
+  text-transform: uppercase;
+}
+
+/* ヘッダー　ここまで　--------------------------------------- */
+
+/* TOP ここから　-------------------------------------------- */
+
+.top_img {
+  position: relative;
+}
+
+.top_img_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top_title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #707070;
+  letter-spacing: 0.1mm;
+}
+
+.top_subtitle {
+  font-size: 2.4rem;
+  color: #707070;
+  letter-spacing: 0.1mm;
+  padding-top: 30px;
+}
+
+/* TOP ここまで　------------------------------------------- */
+
+/* ABOUT ここから　----------------------------------------- */
+
+.about_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #ffd61a;
+  margin: 60px 0 30px;
+}
+
+.about_title_j {
+  font-size: 1.8rem;
+  margin: 0 0 60px;
+}
+
+.about_info {
+  margin: 40px;
+}
+
+.about_pics {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about_pics li {
+  width: calc(100% / 4); /*←画像を横に4つ並べる場合*/
+  padding: 0 0; /*←画像の左右に余白を入れる場合は値を指定*/
+  box-sizing: border-box;
+}
+.about_pics li img {
+  max-width: 100%; /*画像のはみだしを防ぐ*/
+  height: auto; /*画像の縦横比を維持 */
+}
+
+/* ABOUT ここまで　----------------------------------------- */
+
+/*　COURSE ここから　--------------------------------------- */
+
+.course {
+  padding: 60px 0 0;
+}
+
+.course_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222222;
+  margin: 0 0 30px;
+}
+
+.course_info {
+  margin-bottom: 60px;
+}
+
+.course_pics {
+  display: flex;
+  flex-wrap: wrap;
+}
+.course_pics li {
+  width: calc(100% / 2); /*←画像を横に4つ並べる場合*/
+  padding: 0 0; /*←画像の左右に余白を入れる場合は値を指定*/
+  box-sizing: border-box;
+}
+.course_pics li img {
+  max-width: 100%; /*画像のはみだしを防ぐ*/
+  height: auto; /*画像の縦横比を維持 */
+}
+
+.hanten {
+  flex-direction: row-reverse;
+}
+
+.course_haikei {
+  background-color: #f4f4f4;
+}
+
+.course_pics_right {
+  max-width: 430px;
+  margin: auto auto auto 50px;
+}
+
+.course_pics_left {
+  max-width: 430px;
+  margin: auto 50px auto auto;
+}
+
+.course_pics_title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0 0 40px;
+}
+
+/*　COURSE ここまで　--------------------------------------- */
+
+/* NEWS ここから　------------------------------------------ */
+
+.news {
+  padding: 60px 0;
+}
+
+.news_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #ffd61a;
+  margin: 0 0 30px;
+}
+
+.news_title_j {
+  font-size: 1.8rem;
+  margin: 0 0 60px;
+}
+
+.news_wrapper {
+  max-width: 990px;
+  margin: auto;
+}
+
+.news_pics {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.news_contents {
+  width: 300px; /*←画像を横に4つ並べる場合*/
+  padding: 0 15px; /*←画像の左右に余白を入れる場合は値を指定*/
+}
+
+.news_date {
+  margin: 30px 0 24px;
+}
+
+.btn {
+  display: block;
+  width: 300px;
+  margin: auto;
+  padding: 21px 0;
+  background-color: #ffd61a;
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* NEWS ここまで　------------------------------------------ */
+
+/* ACCESS ここから　---------------------------------------- */
+
+.access {
+  background-color: #f4f4f4;
+  padding: 60px 0;
+}
+
+.access_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222222;
+  margin: 0 0 30px;
+}
+
+.access_title_j {
+  font-size: 1.8rem;
+  margin: 0 0 60px;
+}
+
+.access_map {
+  padding-bottom: 60px;
+}
+
+.access_wrapper {
+  width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.access_inner {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+}
+
+.access_name {
+  width: 160px;
+  height: 50px;
+  text-align: left;
+}
+
+.access_item {
+  width: 400px;
+  height: 50px;
+  text-align: left;
+}
+
+/* ACCESS ここまで　---------------------------------------- */
+
+/* CONTACT ここから　--------------------------------------- */
+
+.contact_title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222222;
+  margin: 60px 0 30px;
+}
+
+.contact_title_j {
+  font-size: 1.8rem;
+  margin: 0 0 60px;
+}
+
+.contact_info {
+  margin: 30px 0 70px;
+}
+
+.form_wrapper {
+  width: 650px;
+  margin: auto;
+}
+
+.form_inner {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 1px #bfbfbf;
+}
+
+.form_title {
+  width: 160px;
+  border-right: solid 1px #bfbfbf;
+  margin: 0 0 0 16px;
+  padding: 8px 64px 0 0;
+}
+
+.form_title2 {
+  width: 160px;
+  border-right: solid 1px #bfbfbf;
+  margin: 0 0 0 16px;
+  padding: 16px 64px 0 0;
+}
+
+.form_inner2 {
+  border-bottom: solid 1px #bfbfbf;
+}
+
+.form_title.check_box {
+  padding: 20px 64px 0 0;
+}
+
+.form_item {
+  width: 400px;
+  margin: 8px 0 8px 8px;
+}
+
+.form_parts {
+  box-sizing: border-box;
+  width: 328px;
+  border: solid 1px #bfbfbf;
+  font-size: 1.6rem;
+  padding: 8px;
+}
+
+.form_label {
+  display: block;
+  margin: 12px 0 12px 0;
+}
+
+.text_area {
+  width: 328px;
+  margin: 8px 0 0 0;
+}
+
+input[type*="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: solid 1px #222222;
+  border-radius: 25%;
+  vertical-align: -2px;
+  margin: 0 12px 0 0;
+  font-size: 1.4rem;
+}
+
+input[type*="checkbox"]:checked {
+  background-color: #222222;
+}
+
+.contact_btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 38px 0 140px 0;
+  border: 0; /* 枠線を消す */
+  outline: 0; /* クリックしたときに表示される枠線を消す */
+}
+
+/* CONTACT ここまで　--------------------------------------- */
+
+/* フッター ここから　---------------------------------------- */
+
+.footer {
+  background-color: #707070;
+  padding: 30px;
+}
+
+.copyrights {
+  color: white;
+}
+
+/* フッター ここまで　---------------------------------------- */
+
+/* CONTACTフォームの線を引く箇所　お試しエリア */
