@@ -33,9 +33,6 @@ if (point > 80) {
 
 // <button id="aa">ボタン</button>
 $("#aa").on("click", function () {
-  //   alert(111);
-  // ↑消しちゃダメ
-
   const random = Math.floor(Math.random() * 5);
   console.log(random, "ランダムな数字");
 

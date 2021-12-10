@@ -1,0 +1,59 @@
+body {
+  max-width: 100%;
+}
+
+img {
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 50px auto;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 25px 25px;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.nani {
+  display: flex;
+  max-width: 100%;
+  padding: 25px;
+  justify-content: space-between;
+  background-color: lightblue;
+}
+
+.hyouji {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hyouji_item {
+  width: calc(100% / 2);
+  font-size: 25px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding-bottom: 25px;
+}
+
+.kekka {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 25px;
+  background-color: lightcoral;
+}
+
+.vs {
+  padding: 25px;
+}
+
+.vs2 {
+  vertical-align: middle;
+}
