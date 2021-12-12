@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>配列</title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <style>
+      #main {
+        margin: 5px;
+        padding: 5px;
+        background: #666;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>配列</h1>
+
+    <!-- ここに日時を表示させる -->
+    <div id="view"></div>
+    <!-- ここに日時を表示させる -->
+
+    <script>
+      //記述練習
+      const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
+      console.log(weekdays);
+
+      // 問題2 コンソールに「金」を表示させる
+      console.log(weekdays[5]);
+
+      // 問題3　pushを使って"js授業2回目"を追加
+      weekdays.push("js授業2回目");
+      console.log(weekdays);
+    </script>
+  </body>
+</html>

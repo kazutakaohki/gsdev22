@@ -11,7 +11,6 @@ $("#par_pic").on("click", function () {
 });
 
 $("#gu_pic").on("click", function () {
-  var humanGu = 1;
   var comp = Math.floor(Math.random() * 3 + 1);
 
   if (comp == 1) {
@@ -27,7 +26,6 @@ $("#gu_pic").on("click", function () {
 });
 
 $("#cho_pic").on("click", function () {
-  var humaCho = 2;
   var comp = Math.floor(Math.random() * 3 + 1);
 
   if (comp == 1) {
@@ -43,7 +41,6 @@ $("#cho_pic").on("click", function () {
 });
 
 $("#par_pic").on("click", function () {
-  var humaPar = 3;
   var comp = Math.floor(Math.random() * 3 + 1);
   if (comp == 1) {
     $("#pc").html('<img src="./img/gu.png">');
