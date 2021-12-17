@@ -1,3 +1,17 @@
+[2021.12.18]
+
+以下のフォルダーに入っています。ご確認をお願い致します。
+
+dev22_js02　　>　　　【提出用】JS02課題_04_大木千卓（ToDoList）
+
+【URL】
+
+
+
+
+https://github.com/kazutakaohki/gsdev22/tree/master/js02/%E3%80%90%E6%8F%90%E5%87%BA%E7%94%A8%E3%80%91JS02%E8%AA%B2%E9%A1%8C_04_%E5%A4%A7%E6%9C%A8%E5%8D%83%E5%8D%93%EF%BC%88ToDoList%EF%BC%89
+
+
 [2021.12.10]
 
 以下のフォルダーに入っています。ご確認をお願い致します。
