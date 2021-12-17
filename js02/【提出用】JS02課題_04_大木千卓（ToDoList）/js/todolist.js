@@ -1,63 +1,55 @@
-const form = document.getElementById("form");
-const input = document.getElementById("input");
-const ul = document.getElementById("ul");
+$("#add").on("click", function () {
+  const key = $("#key").val();
+  console.log(key);
 
-const todos = JSON.parse(localStorage.getItem("todos"));
-if (todos) {
-  todos.forEach((todo) => {
-    add(todo);
-  });
-}
+  const value = $("#value").val();
+  console.log(value);
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  add();
+  localStorage.setItem(key, value);
+
+  const html = `
+    <tr>
+        <th>${key}</th>
+        <td>${value}</td>
+        <td id="delete"><button>削除</button></td>
+
+    </tr>
+    `;
+
+  // htmlに表示
+  $("#list").append(html);
 });
 
-function add(todo) {
-  let todoText = input.value;
+//ページ読み込み：保存データ取得表示
 
-  if (todo) {
-    todoText = todo.text;
-  }
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  const value = localStorage.getItem(key);
+  //   一覧表示
+  const html = `
+          <tr>
+              <th>${key}</th>
+              <td>${value}</td>
+              <td id="delete"><button>削除</button></td>
 
-  if (todoText) {
-    const li = document.createElement("li");
+          </tr>
+          `;
 
-    li.innerText = todoText;
-    li.classList.add("list-group-item");
+  // htmlに表示
 
-    if (todo && todo.completed) {
-      li.classList.add("text-decoration-line-through");
-    }
-
-    li.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-      li.remove();
-      saveData();
-    });
-
-    li.addEventListener("click", function () {
-      li.classList.toggle("text-decoration-line-through");
-      saveData();
-    });
-
-    ul.appendChild(li);
-    input.value = "";
-    saveData();
-  }
+  $("#list").append(html);
 }
 
-function saveData() {
-  const lists = document.querySelectorAll("li");
-  const todos = [];
+// 削除
+$("tr").on("click", function () {
+  const vvv = $(this).children("th").text();
+  console.log(vvv, "thisをチェック");
 
-  lists.forEach((li) => {
-    todos.push({
-      text: li.innerText,
-      completed: li.classList.contains("text-decoration-line-through"),
-    });
-  });
+  localStorage.removeItem(vvv);
 
-  localStorage.setItem("todos", JSON.stringify(todos));
-}
+  $(this).empty();
+});
+
+$("delete").on("click", function () {
+  alert("sakujo");
+});

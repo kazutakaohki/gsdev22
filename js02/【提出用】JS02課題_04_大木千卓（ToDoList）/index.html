@@ -4,27 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>js01_課題</title>
+    <title>js02_課題</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="bg-light">
-    <div class="container w-75">
-      <h1 class="text-center text-info my-4">TODO</h1>
-      <form id="form" class="mb-4">
+  <body class="wrap">
+    <div>
+      <h1>TODO</h1>
+      <div>
+        <input
+          type="date"
+          id="key"
+          placeholder="期限を入力"
+          autocomplete="off"
+        />
         <input
           type="text"
-          id="input"
-          class="form-control"
+          id="value"
           placeholder="TODOを入力"
           autocomplete="off"
         />
-      </form>
-      <ul class="list-group text-secondary" id="ul"></ul>
+        <button id="add">追加</button>
+
+        <table class="list" id="list"></table>
+      </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="js/todolist.js"></script>
   </body>
 </html>
-
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
