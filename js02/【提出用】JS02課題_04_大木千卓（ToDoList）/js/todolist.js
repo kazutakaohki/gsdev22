@@ -30,7 +30,7 @@ for (let i = 0; i < localStorage.length; i++) {
           <tr>
               <th>${key}</th>
               <td>${value}</td>
-              <td id="delete"><button>削除</button></td>
+              <td><button class="delete-button">削除</button></td>
 
           </tr>
           `;
@@ -53,3 +53,6 @@ $("tr").on("click", function () {
 $("delete").on("click", function () {
   alert("sakujo");
 });
+
+<td><button class="delete-button">削除</button></td>
+

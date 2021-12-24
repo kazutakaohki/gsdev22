@@ -1,0 +1,151 @@
+//受信処理
+      onChildAdded(dbRef, function (data) {
+        const msg = data.val();
+        const key = data.key; //これが固有の鍵
+
+        console.log(key, '鍵')
+        // テンプレートリテラル
+        let hh = `
+        <div class="message" data-key=${key}>
+          <input type="text" value=${msg.uname} class="uname"/>
+          <input type="text" value=${msg.text} class="text"/>
+          <p class="update">更新</p>
+          <p class="delete">削除</p>
+        </div>`;
+        //この一つの塊が「鍵」を表してる
+
+        $("#output").append(hh);
+      });
+
+
+      $(document).on("click", ".delete", function(){
+        //クリックされた親の鍵を取得する
+        var v = $(this).parent().data().key;
+
+        console.log(v, 'vvv') //-MrWxLlpH8HdF7WXK_U9
+
+        //vは鍵
+        remove(ref(db, 'chat/' + v));
+
+        //htmlを消す方法
+        $(this).parent().remove();
+      });
+
+      // 更新
+      $(document).on("click", ".update", function(){
+        var v = $(this).parent().data().key;
+
+        var nameValue = $(this).siblings('.uname').val();
+        var textValue = $(this).siblings('.text').val();
+
+        console.log(nameValue, '同じ列')
+        console.log(textValue, '同じ列')
+        //クリックされた親の鍵を取得する
+
+        //更新処理
+        set(ref(db, 'chat/' + v), {
+          uname: nameValue,
+          text: textValue,
+        })
+      });
+
+
+
+      <style>
+        .message {
+          width: 500px;
+          border-radius: 10px;
+          box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+          padding: 10px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          margin-bottom: 30px;
+        }
+    
+        input {
+          border: 1px solid #000;
+          width: 40%;
+          padding: 10px;
+          box-sizing: border-box;
+          height: 50px;
+        }
+    
+        .update {
+          margin-left: auto;
+          width: 50px;
+          height: 50px;
+          background: pink;
+          line-height: 50px;
+          text-align: center;
+          color: #fff;
+          border-radius: 5px;
+          transition: all .3s;
+        }
+    
+        .update:hover {
+          opacity: .6;
+          cursor: pointer;
+        }
+    
+        .delete {
+          width: 50px;
+          height: 50px;
+          background: gray;
+          line-height: 50px;
+          text-align: center;
+          color: #fff;
+          border-radius: 5px;
+        }
+    
+        .delete:hover {
+          opacity: .6;
+        }
+      </style>
+
+
+
+
+$(document).on("click", ".delete", function(){
+    //クリックされた親の鍵を取得する
+    var v = $(this).parent().data().key;
+
+    console.log(v, 'vvv') //-MrWxLlpH8HdF7WXK_U9
+
+    //vは鍵
+    remove(ref(db, 'chat/' + v));
+
+    //htmlを消す方法
+    $(this).parent().remove();
+  });
+
+  // 更新
+  $(document).on("click", ".update", function(){
+    var v = $(this).parent().data().key;
+
+    var nameValue = $(this).siblings('.uname').val();
+    var textValue = $(this).siblings('.text').val();
+
+    console.log(nameValue, '同じ列')
+    console.log(textValue, '同じ列')
+    //クリックされた親の鍵を取得する
+
+    //更新処理
+    set(ref(db, 'chat/' + v), {
+      uname: nameValue,
+      text: textValue,
+    })
+  });
+
+
+
+
+
+
+
+
+  jquery parent() おさらいしましょう！
+      jquery remove() おさらいしましょう！
+      jquery data() おさらいしましょう！
+      jquery 動的追加 click おさらいしましょう!
+      jquery siblings() おさらいしましょう！

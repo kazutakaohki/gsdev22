@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>チャットアプリ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- コンテンツ表示画面 -->
+    <h1 class="title">To Do List v.2</h1>
+    <form>
+      <ul>
+      <li><input
+        type="date"
+        id="uname"
+        class="name"
+        placeholder="期限を入力して下さい"
+      /></li>
+      <li><textarea
+        class="textarea"
+        id="text"
+        cols="30"
+        rows="10"
+        placeholder="タスクを入力して下さい"
+      ></textarea></li>
+      <li><button id="send">登録</button></li>
+    </ul>
+    </form>
+      <div id="output" style="overflow: auto; height: 600px"></div>
+    </div>
+
+    <!-- //  以下、jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- // 以下、Firebase -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+
+      // 追加
+      import {
+        getDatabase,
+        ref,
+        push,
+        set,
+        onChildAdded,
+        remove,
+        onChildRemoved,
+      } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAlH0HWZqIvZ97CvXav5qpdgkjD5m3Ji0Q",
+        authDomain: "gs-firebase-lesson.firebaseapp.com",
+        projectId: "gs-firebase-lesson",
+        storageBucket: "gs-firebase-lesson.appspot.com",
+        messagingSenderId: "936725735393",
+        appId: "1:936725735393:web:9f0e721636d1f1b9ca14a0",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      //   追加2
+      const db = getDatabase(app); //RealtimeDBに接続
+      const dbRef = ref(db, "chat"); //RealtimeDB内の"chat"を使う
+
+      // データ送信処理
+
+      $("#send").on("click", function () {
+        // alert(1)//動いたらalertはコメントアウトしておきましょう！
+        // 送信の処理を記述していきます🤗
+
+        // id='uname' つまり #uname 名前のところ
+        // id='text' つまり #text テキストエリアのところ
+        const text = $("#text").val();
+        const uname = $("#uname").val();
+
+        // データの塊を作成している
+        const msg = {
+          uname: $("#uname").val(),
+          text: $("#text").val(),
+        };
+
+        //ユニークKEYを生成 = 絶対にかぶらない番号みたいなもの
+        const newPostRef = push(dbRef);
+        //"chat"にユニークKEYをつけてオブジェクトデータを登録
+        set(newPostRef, msg);
+
+        // alert(uname + text);　入力のチェックをしました
+      });
+
+      // Enterキーで送信
+
+      // データ受信処理
+
+      onChildAdded(dbRef, function (data) {
+        const msg = data.val();
+        const key = data.key;
+
+        // 表示用テキスト・HTMLを作成
+        // let h = "<p>";
+        // h += msg.uname;
+        // h += "<br>";
+        // h += msg.text;
+        // h += "</p>";
+
+        // テンプレートリテラル
+        let hh = `
+            <div class="message" data-key=${key}>
+              <input type="text" value=${msg.uname} class="uname"/>
+              <input type="text" value=${msg.text} class="text"/>
+              <p class="update">更新</p>
+              <p class="delete">完了</p>
+            </div>
+          `;
+        $("#output").append(hh); //#outputの最後に追加
+        // 送信したら入力欄を空にする
+        $("#uname").val("");
+        $("#text").val("");
+      });
+
+      // コメント削除機能
+      $(document).on("click", ".delete", function () {
+        //クリックされた親の鍵を取得する
+        const dbid = $(this).parent().data().key;
+
+        console.log(dbid); //Firebaseのid
+
+        remove(ref(db, "chat/" + dbid));
+
+        //htmlを消す方法
+        $(this).parent().remove();
+      });
+
+      // 更新処理
+      $(document).on("click", ".update", function () {
+        const dbid = $(this).parent().data().key;
+
+        const nameValue = $(this).siblings(".uname").val();
+        const textValue = $(this).siblings(".text").val();
+
+        console.log(nameValue);
+        console.log(textValue);
+        //クリックされた親の鍵を取得する
+
+        //更新処理
+        set(ref(db, "chat/" + dbid), {
+          uname: nameValue,
+          text: textValue,
+        });
+      });
+    </script>
+  </body>
+</html>
