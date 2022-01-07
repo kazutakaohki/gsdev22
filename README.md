@@ -1,3 +1,14 @@
+[2022.01.08]
+
+以下のフォルダーに入っています。ご確認をお願い致します。
+
+dev22 / sweet-tsil.com /　【試作】sweet-tail.com
+
+【URL】
+https://github.com/kazutakaohki/gsdev22/tree/master/sweet-tail.com/%E3%80%90%E8%A9%A6%E4%BD%9C%E3%80%91sweet-tail.com
+
+
+
 [2021.12.24]
 
 以下のフォルダーに入っています。ご確認をお願い致します。
