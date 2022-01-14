@@ -1,3 +1,14 @@
+[2022.01.15]
+
+以下のフォルダーに入っています。ご確認をお願い致します。
+
+dev22 / php01 /　php01_kadai
+
+【URL】
+https://github.com/kazutakaohki/gsdev22/tree/master/php01/php01_kadai
+
+
+
 [2022.01.08]
 
 以下のフォルダーに入っています。ご確認をお願い致します。
