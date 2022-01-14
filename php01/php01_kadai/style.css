@@ -1,0 +1,12 @@
+table {
+  border-collapse: collapse;
+}
+table th,
+table td {
+  border: solid 1px black;
+  /*実線 1px 黒*/
+}
+
+ul li {
+  list-style: none;
+}
